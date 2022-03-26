@@ -85,7 +85,7 @@ services:
     volumes:
       - songs-cache:/Music/raveberry
       # Comment this line if pulse does not work.
-      - "/run/user/${UID:-1000}/pulse:/run/pulse"
+      #- "/run/user/${UID:-1000}/pulse:/run/pulse"
       # to customize mopidy config, mount a custom config file with this line
       # - /path/to/mopidy.conf:/config/mopidy.conf
     depends_on:
@@ -130,7 +130,7 @@ services:
   nginx:
     image: bumb0s/raveberry-nginx
     ports:
-      - "8080:8080"
+      - "80:80"
     depends_on:
       - daphne
     restart: always
