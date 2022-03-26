@@ -128,7 +128,7 @@ services:
       - ICECAST_PORT
     restart: always
   nginx:
-    image: raveberry/raveberry-nginx
+    image: bumb0s/raveberry-nginx
     ports:
       - "8080:8080"
     depends_on:
